@@ -11,9 +11,9 @@ true, "speed": 4.872463273808071, "size_min": 2.436231636904035, "sync": true } 
 "enable": true, "speed": 6, "direction": "none", "random": true, "straight":
 false, "out_mode": "out", "bounce": false, "attract": { "enable": true,
 "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas",
-"events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": {
+"events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": {
 "enable": true, "mode": "push" }, "resize": true }, "modes": { "grab": {
-"distance": 487.24632738080703, "line_linked": { "opacity": 1 } }, "bubble": {
+"distance": 140, "line_linked": { "opacity": 1 } }, "bubble": {
 "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 },
 "repulse": { "distance": 73.08694910712106, "duration": 0.4 }, "push": {
 "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true });
