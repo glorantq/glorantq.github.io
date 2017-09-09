@@ -20,9 +20,5 @@ body {
 }
 
 a {
-  color: #4a4a4a;
-}
-
-.hero-foot {
-  margin-bottom: 0.75rem;
+  color: #4a4a4a !important;
 }
