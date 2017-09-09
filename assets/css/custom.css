@@ -18,3 +18,11 @@ body {
   padding: 0;
   z-index: 0;
 }
+
+a {
+  color: #4a4a4a;
+}
+
+.hero-foot {
+  margin-bottom: 0.75rem;
+}
