@@ -43,13 +43,35 @@ let messages = [
   "haha NO",
   "You have accessed a surreal website",
   "haha",
-  "Kotlin > Java > C++ > C#"
+  "Kotlin > Java > C++ > C#",
+  "Ich spreche Deutsch."
 ];
 
 $("document").ready(() => {
-  $("#tweet_message").html(messages[random(0, messages.length)]);
+  let messageID = getQueryParams(document.location.search).message;
+  if(messageID && !isNaN(messageID)) {
+      if(messageID < 0) messageID = 0;
+      if(messageID > messages.length - 1) messageID = messages.length - 1;
+      $("#tweet_message").html(messages[messageID]);
+  } else {
+    $("#tweet_message").html(messages[random(0, messages.length)]);
+  }
 });
 
 function random(lowerBound, upperBound) {
   return Math.floor((Math.random() * upperBound) + lowerBound);
+}
+
+function getQueryParams(qs) {
+    qs = qs.split('+').join(' ');
+
+    var params = {},
+        tokens,
+        re = /[?&]?([^=]+)=([^&]*)/g;
+
+    while (tokens = re.exec(qs)) {
+        params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+    }
+
+    return params;
 }
