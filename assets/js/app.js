@@ -17,3 +17,39 @@ false, "out_mode": "out", "bounce": false, "attract": { "enable": true,
 "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 },
 "repulse": { "distance": 73.08694910712106, "duration": 0.4 }, "push": {
 "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true });
+
+let messages = [
+  "Henlo",
+  "Henlo fren",
+  "haha yes",
+  "welcome fellow dimensional",
+  "haha yes this is my W E B S I T E",
+  "welcome to this universe fren",
+  "void.mp8 is invading this plane<br>Please wait...",
+  "goond morning",
+  "you may access the C U B E S",
+  "welcome to the C U B E S fren",
+  "the left buttons do nothing",
+  "*scronch*",
+  "do i see a VEGETAL??",
+  "i protec",
+  "no attac allowed here fren",
+  "beware of PILLARS",
+  "welcome to the secretts",
+  "haha",
+  "whom'st'd've",
+  "are you surreal my fren?",
+  "haha A S C E N D",
+  "haha NO",
+  "You have accessed a surreal website",
+  "haha",
+  "Kotlin > Java > C++ > C#"
+];
+
+$("document").ready(() => {
+  $("#tweet_message").html(messages[random(0, messages.length)]);
+});
+
+function random(lowerBound, upperBound) {
+  return Math.floor((Math.random() * upperBound) + lowerBound);
+}
